@@ -1,1 +1,1 @@
-# cdmmapper
+# Common Data Model Mapper (CDMMapper)
