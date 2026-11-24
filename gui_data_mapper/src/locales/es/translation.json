@@ -1,0 +1,307 @@
+{
+    "quest": {
+        "steps": {
+            "step1": "01. Ingesta",
+            "step1_title": "01. Ingesta de Fuentes",
+            "step2": "02. Clasificación",
+            "step2_title": "02. Clasificación de Entidades",
+            "step3": "03. Rompecabezas",
+            "step3_title": "03. Rompecabezas de Columnas",
+            "step4": "04. Semántica",
+            "step4_title": "04. Mapeo Semántico",
+            "step5": "05. Exportar",
+            "step5_title": "05. Lanzamiento de Exportación",
+            "step6": "06. Entrega",
+            "step6_title": "06. Generar Documentación",
+            "entity_label": "Entidad seleccionada"
+        },
+        "sidebar": {
+            "memory": "Monitor de Memoria",
+            "reset": "Reiniciar Quest",
+            "select_entity": "Selecciona una entidad",
+            "entity_context": "Usa el desplegable junto a cada paso; la selección se aplica a los pasos 3–5."
+        },
+        "swal": {
+            "reset_title": "¿Reiniciar espacio?",
+            "reset_text": "Esto borrará permanentemente todos los archivos, mapeos y configuraciones. No se puede deshacer.",
+            "confirm": "Sí, reiniciar todo",
+            "cancel": "Cancelar",
+            "done_title": "Reinicio Completado",
+            "done_text": "El espacio está limpio y listo para una nueva aventura.",
+            "error_title": "Error",
+            "error_text": "No se pudo reiniciar el estado del servidor."
+        },
+        "delivery": {
+            "no_logic_title": "Sin lógica detectada",
+            "no_logic_text": "Por favor, genera tus consultas SQL en el Paso 05 antes de descargar.",
+            "generating_title": "Generando Paquete",
+            "generating_text": "Espera mientras procesamos archivos pesados y generamos la documentación.",
+            "error_server": "El servidor encontró un error al generar el ZIP.",
+            "success_title": "¡Paquete descargado con éxito!",
+            "error_title": "Error de Exportación",
+            "error_failed": "Fallo al exportar"
+        }
+    },
+    "common": {
+        "success": "Éxito",
+        "error": "Error",
+        "cancel": "Cancelar",
+        "confirm_reset": "Sí, reiniciar todo",
+        "required": "Requerido",
+        "retry": "Reintentar",
+        "understood": "Entendido",
+        "loading": "Cargando...",
+        "loading_more": "Cargando más valores...",
+        "reset": "Resetear",
+        "processing": "Procesando..."
+    },
+    "l1": {
+        "persistence": {
+            "title": "Datos de Espacio de Trabajo Existentes",
+            "subtitle": "Se han encontrado archivos subidos previamente. Recomendamos purgar el espacio para evitar conflictos.",
+            "btn": "Purgar Espacio"
+        },
+        "header": {
+            "title": "Common Data Model Mapper (CDMMapper)",
+            "subtitle": "Nuestra misión es cerrar la brecha entre fuentes fragmentadas y modelos de datos estandarizados (CDM).",
+            "badge1": "Alineación Estructural",
+            "badge2": "Traducción Semántica",
+            "intro": "Para comenzar, debes proporcionar tanto tus Datos de Origen como la definición del Framework CDM."
+        },
+        "cards": {
+            "sources_title": "1. Archivos de Origen",
+            "sources_text": "Sube tus conjuntos de datos clínicos en formato CSV o TXT. Representan la información antes de la armonización.",
+            "model_title": "2. Definición del Framework CDM",
+            "model_text_p1": "Sube la carpeta /docs generada por",
+            "model_link": "CDMBuilder",
+            "model_text_p2": "Contiene el plano (entidades, variables y catálogos) de tu modelo objetivo."
+        },
+        "inputs": {
+            "sources_label_main": "01. Datos de Origen",
+            "sources_btn": "Subir Archivos CSV",
+            "model_label_main": "02. Estructura CDM",
+            "model_btn": "Subir Carpeta 'docs'"
+        },
+        "loading_msg": "DuckDB está indexando archivos...",
+        "tables": {
+            "sources_title": "Fuentes Indexadas",
+            "entities_title": "Entidades Objetivo",
+            "catalogs_title": "Catálogos Cargados",
+            "col_file": "Archivo",
+            "col_rows": "Filas",
+            "col_cols": "Cols",
+            "col_status": "Estado",
+            "col_entity": "Entidad",
+            "col_vars": "Vars",
+            "col_cat_status": "Estado Catálogo",
+            "entity_def": "Definición de Entidad",
+            "vars": "Vars",
+            "cat_linked": "Diccionarios Vinculados",
+            "cat_pending": "Catálogos Pendientes",
+            "no_vocabs": "Sin Vocabularios"
+        },
+        "swal": {
+            "overwrite_title": "¿Sobrescribir Estructura?",
+            "overwrite_text": "Ya hay una estructura cargada. Subir una nueva carpeta 'docs' reiniciará todos los mapeos actuales.",
+            "folder_info_title": "Subir Estructura CDM",
+            "folder_info_p1": "Por favor, selecciona la carpeta 'docs' generada por CDMBuilder.",
+            "folder_info_li1": "Debe contener cdmb_config.json",
+            "folder_info_li2": "Debe incluir la subcarpeta /catalogs",
+            "folder_btn": "Seleccionar Carpeta",
+            "invalid_folder_title": "Carpeta Inválida",
+            "invalid_folder_text": "No se encontró cdmb_config.json. ¿Seguro que elegiste la carpeta 'docs' correcta?",
+            "sources_success": "Se indexaron {{count}} fuentes correctamente.",
+            "model_success": "Estructura CDM y catálogos cargados correctamente.",
+            "upload_error": "Algo salió mal al procesar los archivos."
+        }
+    },
+    "l2": {
+        "header": {
+            "intro_p1": "Arrastra y suelta tus",
+            "intro_bold1": "archivos CSV originales",
+            "intro_p2": "en sus correspondientes",
+            "intro_bold2": "Entidades CDM",
+            "intro_p3": "Este paso define la arquitectura de datos para el proceso de mapeo.",
+            "files_count": "Archivos por clasificar"
+        },
+        "info_box": {
+            "title": "¿Se detectaron múltiples archivos?",
+            "text_p1": "Si asignas dos o más archivos a una sola entidad, debes hacer clic en el botón",
+            "btn_name": "Configurar Unión",
+            "text_p2": "para especificar cómo deben fusionarse (ej. Unión Vertical o Join por Clave Primaria)."
+        },
+        "columns": {
+            "unassigned": "Archivos sin asignar",
+            "data_model": "Entidades del Modelo de Datos",
+            "all_sorted": "Todos los archivos clasificados"
+        },
+        "entities": {
+            "max_capacity": "Capacidad máxima alcanzada",
+            "add_more": "Añade uno más",
+            "drop_here": "Suelta aquí",
+            "relational_logic": "Lógica relacional",
+            "btn_join": "Configurar Unión"
+        },
+        "modal": {
+            "title": "Configuración de Unión",
+            "subtitle": "Arquitecto de Relaciones",
+            "sec1_title": "1. Estrategia de Unión",
+            "sec2_title": "2. Claves de Vinculación",
+            "inner_label": "Inner Join",
+            "inner_desc": "Solo registros coincidentes",
+            "left_label": "Left Join",
+            "left_desc": "Todo de la Izquierda + coincidencias",
+            "full_label": "Full Join",
+            "full_desc": "Todos los registros de ambos",
+            "base_table": "Base (Izquierda)",
+            "target_table": "Objetivo (Derecha)",
+            "btn_add_key": "Añadir Clave Compuesta",
+            "btn_confirm": "Confirmar Arquitectura"
+        }
+    },
+    "l3": {
+        "header": {
+            "tag": "Paso 03: Mapeo Estructural de Columnas",
+            "description": "Conecta tus atributos de origen con las variables CDM estandarizadas. Este paso asegura que cada pieza de información se coloque en su contenedor estructural correcto."
+        },
+       "cards": {
+            "automap": {
+                "title": "Motor de Auto-Mapeo Inteligente",
+                "text_p1": "El",
+                "highlight": "Smart Auto-Map",
+                "text_p2": "utiliza algoritmos de similitud de cadenas para sugerir coincidencias. Revisa las sugerencias cuidadosamente."
+            },
+            "namespace": {
+                "title": "Lógica de Espacio de Nombres",
+                "text_p1": "Las columnas de origen se prefijan como",
+                "text_p2": "Crucial para entidades multi-archivo para identificar el origen."
+            },
+            "integrity": {
+                "title": "Integridad del Esquema",
+                "text_p1": "Las variables CDM no asignadas se",
+                "highlight": "rellenarán automáticamente con valores NULL",
+                "text_p2": "para garantizar el cumplimiento del modelo objetivo."
+            },
+            "temporal": {
+                "title": "Estandarización Temporal",
+                "text_p1": "Para variables de tipo",
+                "highlight1": "Date/DateTime",
+                "text_p2": "especifica el formato de origen para permitir la transformación a",
+                "highlight2": "ISO8601"
+            }
+        },
+        "selector": {
+            "label": "Seleccionar Entidad CDM"
+        },
+        "btn": {
+            "automap": "Auto-Mapeo Inteligente"
+        },
+        "columns": {
+            "source": "Columnas de Origen",
+            "target": "Objetivo",
+            "default_desc": "Variable Estándar CDM",
+            "linked_msg": "Coincidencia Vinculada",
+            "drop_msg": "Suelta la variable aquí"
+        },
+        "date": {
+            "title": "Interpretación de Fecha de Origen",
+            "description": "Define cómo se escriben las fechas **en tu archivo original** para que el motor pueda procesarlas.",
+            "placeholder": "Seleccionar Formato...",
+            "required": "Acción Requerida",
+            "locked": "Patrón Bloqueado",
+            "detected": "Patrón detectado automáticamente"
+        },
+        "automap": {
+            "success_title": "Éxito en Auto-Map",
+            "success_text": "¡El motor encontró {{count}} coincidencias basadas en similitud de nombres!",
+            "fail_title": "No se encontraron coincidencias",
+            "fail_text": "El motor no pudo encontrar similitudes cercanas. Por favor, mapea las columnas manualmente."
+        }
+    },
+    "l4": {
+        "header": {
+            "tag": "Paso 04: Traducción Semántica de Valores",
+            "description": "Mapea los valores originales a códigos de catálogo estandarizados."
+        },
+        "sidebar": {
+            "title": "Campos a Mapear",
+            "no_source": "Sin origen",
+            "mapped_badge": "MAPEADO"
+        },
+        "panel": {
+            "pending": "PENDIENTES",
+            "complete": "Completado",
+            "search_placeholder": "Buscar en catálogo...",
+            "btn_automap": "Auto-Mapeo",
+            "btn_automap_all": "Auto-mapear todos los campos",
+            "select_field": "Selecciona un Campo",
+            "source_val": "Valor de Origen",
+            "freq": "Frec.",
+            "select_code": "Seleccionar Código...",
+            "clear_assignment": "Limpiar Asignación",
+            "no_source_values": "No hay valores de origen; este campo se marca como completado automáticamente."
+        },
+        "swal": {
+            "no_source_title": "Sin Columna de Origen",
+            "no_source_text": "Por favor, mapea primero la columna de origen en el Nivel 3.",
+            "no_match_title": "Sin Coincidencias",
+            "no_match_text": "No se encontraron coincidencias exactas en el catálogo.",
+            "auto_success_title": "Éxito en Auto-Map",
+            "auto_success_text": "Se mapearon {{count}} valores automáticamente.",
+            "auto_all_summary": "Mapeos realizados: {{values}} valores en {{fields}} campos. Sin valores de origen (completados automáticamente): {{empty}}. Sin coincidencias: {{unmatched}}. Omitidos por no tener columna de origen: {{skipped}}.",
+            "auto_all_warning_title": "Auto-mapeo completado con errores",
+            "auto_all_failed_fields": "Campos con error: {{fields}}",
+            "reset_title": "¿Reiniciar Variable?",
+            "reset_text": "¿Estás seguro de que quieres borrar TODOS los mapeos de {{var}}?"
+        }
+    },
+    "l5": {
+        "header": {
+            "description": "Has llegado al final del viaje. En esta etapa final, el sistema compila todas tus decisiones estructurales y semánticas en una ejecución única de alto rendimiento."
+        },
+        "cards": {
+            "rules_title": "Reglas del Motor de Exportación",
+            "rules_text_p1": "El sistema genera un archivo .csv estandarizado aplicando tus selecciones de columnas y traducciones de valores. Realiza un",
+            "rules_bold": "casting de datos estricto",
+            "rules_text_p2": "según los requisitos del CDM.",
+            "sql_title": "SQL Reproducible",
+            "sql_text_p1": "Transparencia total mediante una",
+            "sql_bold": "consulta SQL con sintaxis DuckDB",
+            "sql_text_p2": "Audita la lógica de transformación o reprodúcela en cualquier entorno compatible."
+        },
+        "panel": {
+            "preview_title": "Vista Previa SQL (Optimizado)",
+            "no_mappings": "No se detectaron mapeos",
+            "server_status": "Procesamiento en Servidor Activo",
+            "sql_info": "El SQL incluye sentencias CASE anidadas y reconocimiento de patrones strptime.",
+            "btn_export": "Descargar CSV"
+        },
+        "query": {
+            "no_def": "No se encontró la definición de la entidad",
+            "no_files": "No hay archivos asignados a esta entidad"
+        },
+        "swal": {
+            "error_title": "Fallo en la Exportación",
+            "error_text": "El motor encontró un problema",
+            "error_btn": "Revisar Mapeos",
+            "error_msg": "Fallo al exportar"
+        }
+    },
+    "l6": {
+        "header": {
+            "tag": "Paso 06: Entrega Final y Trazabilidad",
+            "description": "Tu viaje de transformación ha terminado. Se han aplicado todas las reglas estructurales y semánticas."
+        },
+        "panel": {
+            "title": "Descargar Paquete de Transformación",
+            "loading_title": "Generando Paquete...",
+            "item_csv": "Archivos .CSV Armonizados",
+            "item_sql": "Consultas .SQL DuckDB",
+            "item_audit": "Manifiesto de Auditoría",
+            "btn_collect": "Recoger Paquete de Transformación (.zip)"
+        },
+        "footer": {
+            "new_quest": "Iniciar una Nueva Misión de Transformación"
+        }
+    }
+}

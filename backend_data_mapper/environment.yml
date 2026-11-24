@@ -1,0 +1,14 @@
+name: datamapper
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - duckdb          # El motor de base de datos
+  - fastapi         # El framework para la API
+  - uvicorn         # Servidor para ejecutar la API
+  - pandas          # Manipulación de datos (opcional, pero útil)
+  - python-multipart # Necesario para recibir archivos del frontend
+  - psutil>=6.0.0
+  - pyinstaller      # Para empaquetar la aplicación en un ejecutable
+  - pip:
+    - python-dotenv # Para gestionar variables de entorno
