@@ -36,17 +36,23 @@ All system packages (`nginx`), frontend build dependencies (`package.json`), and
 
 To deploy the Docker container, follow these steps:
 
-1. Clone or download the repository from <a href="https://github.com/cienciadedatosysalud/cdmmapper">GitHub</a> to your local machine.
-2. Open a terminal and navigate to the repository root folder (`cdmmapper`).
-3. Build the Docker image using the provided `Dockerfile`:
-   ```bash
-   docker build -t cdmmapper .
+1. Pull the latest Docker image from GitHub Container Registry:
+
    ```
-4. Run the container mapping port `3000`:
-   ```bash
-   docker run -d --name cdmmapper -p 3000:3000 cdmmapper
+   docker pull ghcr.io/cienciadedatosysalud/cdmmapper:latest
+   
    ```
-5. Open a web browser and access `http://<APP_HOST>:<APP_PORT>` to see the graphical user interface of the application (by default <a href="http://localhost:3000">http://localhost:3000</a>).
+
+2. Run the container mapping port `3000`:
+
+   ```
+   docker run -d --name cdmmapper -p 3000:3000 ghcr.io/cienciadedatosysalud/cdmmapper:latest
+   
+   ```
+
+3. Open a web browser and access `http://<APP_HOST>:<APP_PORT>` to see the graphical user interface of the application (by default http://localhost:3000).
+
+Note: If port 3000 is already in use on your machine, you can map the container to a different host port by changing -p 3000:3000 to -p 3001:3000 (or any other available port) and accessing http://localhost:3001.
 
 ## How to use the application
 
