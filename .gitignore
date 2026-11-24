@@ -1,0 +1,8 @@
+backend_data_mapper/data
+backend_data_mapper/__pycache__
+backend_data_mapper/dist
+backend_data_mapper/build
+gui_data_mapper/.astro
+gui_data_mapper/.vscode
+gui_data_mapper/node_modules
+gui_data_mapper/dist
